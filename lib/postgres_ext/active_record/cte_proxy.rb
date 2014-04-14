@@ -34,6 +34,14 @@ class CTEProxy
     @model.primary_key
   end
 
+  def attribute_alias?(*args)
+    @model.attribute_alias?(*args)
+  end
+
+  def aggregate_reflections(*args)
+    @model.aggregate_reflections(*args)
+  end
+
   def instantiate(record, column_types = {})
     @model.instantiate(record, column_types)
   end
